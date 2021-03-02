@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap');
+
+$green: #00c980;
+$green-bright: #00fe8c;
+$red: #ff5458;
+$white: #fff;
+
+body {
+  background-color: #222222;
+}
+
+.btn {
+  background-color: $green;
+  color: #000;
+  border-radius: 5px;
+  height: 40px;
+  width: 200px;
+  font-family: 'Roboto mono', monospace;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $green-bright;
+  }
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 25px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #555;
+  font-family: 'Roboto mono', monospace;
+  overflow: auto;
+
+  &--success {
+    box-shadow: 0px 0px 3px 3px $green-bright !important;
+  }
+
+  &--error {
+    box-shadow: 0px 0px 3px 3px $red !important;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+
+  &__label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    transition: color 0.05s ease-in-out;
+    color: $green;
+  }
+
+  &__input {
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #777;
+    border: 1px solid #444;
+    transition: border 0.15s ease-in-out;
+
+    &--valid {
+      border: 1px solid desaturate($green, 25%);
+
+      & + label {
+        opacity: 0.7;
+        color: $green-bright !important;
+      }
+    }
+
+    &--invalid {
+      border: 1px solid $red !important;
+
+      & + label {
+        opacity: 1;
+        color: $red !important;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 1px solid $green-bright;
+    }
+
+    &:focus {
+      & + label {
+        opacity: 1;
+        color: $green-bright;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 30px auto 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    margin-top: 8px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $green-bright;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .form {
+    width: 90vw;
+    min-width: 220px;
+  }
+}
+
+@media (max-height: 540px) {
+  .form {
+    transform: translate(-50%, 0);
+    top: 5px;
+    overflow: auto;
+  }
+}
