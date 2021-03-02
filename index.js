@@ -10,7 +10,7 @@ const FormItemValidateHandler = (e, el, validator) => {
   e.preventDefault()
   let test
 
-  const emailRegEx = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{1,3})+$/
+  const emailRegEx = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
   const fullnameRegEx = /^(?=.*?[A-z]).{4,}$/
   const passwordRegEx = /^(?=.*?[A-z0-9]).{4,}$/
 
