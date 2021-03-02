@@ -72,6 +72,9 @@ body {
 }
 
 .form__label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 18px;
   margin-bottom: 8px;
   opacity: 0.6;
@@ -128,8 +131,8 @@ body {
   margin-top: 8px;
   color: #aaa;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .form__link:hover, .form__link:focus {
