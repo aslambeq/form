@@ -1,4 +1,5 @@
 # form
 common register form with validation
 
-[codepen](https://codepen.io/aslambeq/pen/dyOmYgR)
+[github.io](aslambeq.github.io/form/)
+[codepen.io](https://codepen.io/aslambeq/pen/dyOmYgR)
